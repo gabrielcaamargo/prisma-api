@@ -1,5 +1,6 @@
 #!/bin/bash
 
-yarn
+npm install yarn
 yarn build
+npx typeorm migration:run
 yarn start:dev

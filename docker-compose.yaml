@@ -4,9 +4,10 @@ services:
   app:
     build: .
     entrypoint: .docker/entrypoint.sh
-    container_name: prisma-api-app
+    container_name: prismaapi-app
     ports:
       - "3000:3000"
+      - "5555:5555"
     volumes:
       - .:/home/node/app
     depends_on:
@@ -23,4 +24,4 @@ services:
       - .docker/dbdata:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=prisma-api
+      - POSTGRES_DB=prismaapi
